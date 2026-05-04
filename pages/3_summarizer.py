@@ -45,5 +45,5 @@ if st.button("要約する", type="primary", use_container_width=True):
                 col_c.metric("圧縮率", f"{ratio}%")
             except ValueError as e:
                 st.error(str(e))
-            except Exception:
-                st.error("AIの呼び出しに失敗しました。しばらく待ってから再試行してください。")
+            except Exception as e:
+                st.error(f"エラー: {e}")

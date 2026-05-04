@@ -37,5 +37,5 @@ if st.button("校正する", type="primary", use_container_width=True):
                 st.markdown(result)
             except ValueError as e:
                 st.error(str(e))
-            except Exception:
-                st.error("AIの呼び出しに失敗しました。しばらく待ってから再試行してください。")
+            except Exception as e:
+                st.error(f"エラー: {e}")

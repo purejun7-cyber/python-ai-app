@@ -40,5 +40,5 @@ if st.button("返信文を作成する", type="primary", use_container_width=Tru
                 st.text_area("返信文（コピーしてご利用ください）", value=result, height=300)
             except ValueError as e:
                 st.error(str(e))
-            except Exception:
-                st.error("AIの呼び出しに失敗しました。しばらく待ってから再試行してください。")
+            except Exception as e:
+                st.error(f"エラー: {e}")

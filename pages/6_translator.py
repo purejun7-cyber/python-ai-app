@@ -43,5 +43,5 @@ if st.button("翻訳する", type="primary", use_container_width=True):
                 st.text_area("翻訳結果（コピーしてご利用ください）", value=result, height=200)
             except ValueError as e:
                 st.error(str(e))
-            except Exception:
-                st.error("AIの呼び出しに失敗しました。しばらく待ってから再試行してください。")
+            except Exception as e:
+                st.error(f"エラー: {e}")

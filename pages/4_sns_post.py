@@ -50,5 +50,5 @@ if st.button("投稿文を生成する", type="primary", use_container_width=Tru
                 st.caption(f"文字数: {len(result)} 文字")
             except ValueError as e:
                 st.error(str(e))
-            except Exception:
-                st.error("AIの呼び出しに失敗しました。しばらく待ってから再試行してください。")
+            except Exception as e:
+                st.error(f"エラー: {e}")
