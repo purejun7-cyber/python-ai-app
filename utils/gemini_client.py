@@ -18,7 +18,7 @@ def get_client():
     if not api_key:
         raise ValueError("GEMINI_API_KEY が設定されていません")
     genai.configure(api_key=api_key)
-    return genai.GenerativeModel("gemini-2.0-flash")
+    return genai.GenerativeModel("gemini-2.5-flash")
 
 def generate(prompt: str) -> str:
     model = get_client()
